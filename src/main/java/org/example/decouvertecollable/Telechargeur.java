@@ -16,11 +16,11 @@ public class Telechargeur implements Callable<Boolean> {
     public Boolean call() throws Exception {
         boolean resultat = true;
 
-        System.out.println("\tDébut du téléchargement de " + urlHttp);
+        System.out.println("\tDébut du téléchargement de " + urlHttp + " - " + Thread.currentThread().getName() + " - " + Thread.currentThread().getId());
 
         pause(3000);
 
-        System.out.println("\tFin du téléchargement de " + urlHttp);
+        System.out.println("\tFin du téléchargement de " + urlHttp + " - " + Thread.currentThread().getName() + " - " + Thread.currentThread().getId());
 
         return resultat;
     }
